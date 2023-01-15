@@ -66,24 +66,19 @@ response
         documentdescription.value = window.btoa(unescape(encodeURIComponent('["api 1...","api 2..."]')));
 
         var requestsample = document.getElementById("requestsample");
-        var test1 = '[{\n "act": "getno",\n  "param":\n {\n  "name": "001"\n }},{\n "act": "gethello",\n  "param":\n {\n  "name": "002"\n }}]';
-        test1 = test1.replace(/"/g, "～");
+        var test1 = '["{～act～: ～getno～,～param～: {   ～name～: ～001～,}}","{～act～: ～gethello～,～param～: {   ～name～: ～002～,}}"]';
         requestsample.value = window.btoa(unescape(encodeURIComponent(test1)));
 
         var requeststring = document.getElementById("requeststring");
-        var test2 = '["[{"header":"name","ismust":"Y","datatype":"string","description":"api對象"},]","[{"header":"name","ismust":"Y","datatype":"string","description":"api對象"},]"]';
-        test2 = test2.replace(/"/g, "～");
+        var test2 = '["[{～header～:～name～,～ismust～:～Y～,～datatype～:～string～,～description～:～api對象～}]","[{～header～:～name～,～ismust～:～Y～,～datatype～:～string～,～description～:～api對象～}]"]';
         requeststring.value = window.btoa(unescape(encodeURIComponent(test2)));
 
         var responsesample = document.getElementById("responsesample");
-        var test3 = '[{"errorcode":"1","errormsg":"網路中斷","remark":null},{"errorcode":"0","errormsg":"","remark":"hello"}]';
-        test3 = test3.replace(/"/g, "～");
+        var test3 = '["{～errorcode～:～1～,～errormsg～:～網路中斷～,～remark～:null}","{～errorcode～:～0～,～errormsg～:～ ～,～remark～:～hello～}"]';
         responsesample.value = window.btoa(unescape(encodeURIComponent(test3)));
 
         var responsestring = document.getElementById("responsestring");
-        var test4 = '["[{"header":"errorcode","ismust":"Y","datatype":"string","description":"1正常,-1錯誤"}, {"header":"errormsg","ismust":"Y","datatype":"string","description":"錯誤訊息"},{"header":"remark","ismust":"Y","datatype":"string","description":"null無傳回值"},
-        ]","[{"header":"errorcode","ismust":"Y","datatype":"string","description":"1正常,-1錯誤"}, {"header":"errormsg","ismust":"Y","datatype":"string","description":"錯誤訊息"},{"header":"remark","ismust":"Y","datatype":"string","description":"回傳hello"}]"]';
-        test4 = test4.replace(/"/g, "～");
+        var test4 = '["[{～header～:～errorcode～,～ismust～:～Y～,～datatype～:～string～,～description～:～1正常,-1錯誤～}, {～header～:～errormsg～,～ismust～:～Y～,～datatype～:～string～,～description～:～錯誤訊息～},{～header～:～remark～,～ismust～:～Y～,～datatype～:～string～,～description～:～null無傳回值～}]","[{ ～header～: ～errorcode～, ～ismust～: ～Y～, ～datatype～: ～string～, ～description～: ～1正常,-1錯誤～ }, { ～header～: ～errormsg～, ～ismust～: ～Y～, ～datatype～: ～string～, ～description～: ～錯誤訊息～ }, { ～header～: ～remark～, ～ismust～: ～Y～, ～datatype～: ～string～, ～description～: ～回傳hello～ }]"]';
         responsestring.value = window.btoa(unescape(encodeURIComponent(test4)));
 
         var downloadfilename = document.getElementById("downloadfilename");
